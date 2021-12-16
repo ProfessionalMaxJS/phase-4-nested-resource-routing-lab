@@ -5,4 +5,11 @@ class UsersController < ApplicationController
     render json: user, include: :items
   end
 
+  def index
+      users = User.all
+    render json: users, status: :ok
+  end
+
+
+
 end
